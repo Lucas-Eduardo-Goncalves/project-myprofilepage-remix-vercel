@@ -57,4 +57,10 @@ export const ProfilePhotoArea = styled(motion.div)`
   img {
     max-width: 25rem;
   }
+
+  @media(max-width: 450px) {
+    img {
+      max-width: 300px;
+    }
+  }
 `;

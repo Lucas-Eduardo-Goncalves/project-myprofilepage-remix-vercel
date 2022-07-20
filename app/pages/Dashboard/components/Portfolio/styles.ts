@@ -62,6 +62,13 @@ export const ProjectsArea = styled.ul`
   @media(max-width: 1150px) {
     flex-direction: column;
   }
+
+  @media(max-width: 450px) {
+    img {
+      flex: unset;
+      width: 280px;
+    }
+  }
 `;
 
 export const NavArea = styled.nav`
@@ -85,5 +92,16 @@ export const NavArea = styled.nav`
 
   button {
     margin-left: auto;
+  }
+
+  @media(max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 1rem;
+
+    button {
+      margin-left: unset;
+    }
   }
 `;
