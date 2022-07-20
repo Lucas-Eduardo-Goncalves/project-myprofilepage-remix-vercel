@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import styled from "styled-components";
 
 export const Container = styled.section`
@@ -31,7 +32,7 @@ export const SocialArea = styled.nav`
   align-items: center;
   margin-top: 2rem;
 
-  button {
+  a {
     margin-left: auto;
   }
   
@@ -44,9 +45,34 @@ export const SocialArea = styled.nav`
     flex-direction: column;
     justify-content: center;
 
-    button {
+    a {
       margin-left: unset;
       margin-top: 1rem;
     }
   }
 `;
+
+export const SimpleLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 20rem;
+  padding: 1rem 2rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+  
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--purple);
+  color: #fff;
+  text-decoration: none;
+  
+  transition: background-color 0.2s;
+  
+  &:hover {
+    background-color: var(--medium-purple);
+  }
+`; 

@@ -18,7 +18,7 @@ export function Portfolio({ id, projects }: IPortfolioProps) {
   return (
     <Container id={id}>
       <PortfolioTitle>Meus Projetos</PortfolioTitle>
-      <p>Alguns dos meus melhores projetos pessoais, ou feitos para uso pessoal. Trabalhados nos ultimos meses.</p>
+      <p>Alguns dos meus melhores projetos pessoais. Trabalhados nos últimos meses.</p>
 
       <ProjectsArea>
         {projects && projects.map((project) => (

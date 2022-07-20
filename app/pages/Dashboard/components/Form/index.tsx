@@ -19,7 +19,7 @@ export function Form({ id, errors }: FormProps) {
   return (
     <Container id={id}>
       <FormArea method="post">
-        <FormTitle>Me contate</FormTitle>
+        <FormTitle>Entre em contato</FormTitle>
 
         <SimpleInput
           name="name"
@@ -37,7 +37,7 @@ export function Form({ id, errors }: FormProps) {
 
         <SimpleInput
           name="subject"
-          label="Sujeito:"
+          label="Assunto:"
           placeholder="ideia principal"
           error={errors?.subject}
         />

@@ -27,7 +27,7 @@ export function Apresentation({ id }: IApresentationProps) {
         offset={50}
         duration={500}
       >
-        Me contate
+        Entre em contato
       </SimpleButton>
 
       <AreaSquares />

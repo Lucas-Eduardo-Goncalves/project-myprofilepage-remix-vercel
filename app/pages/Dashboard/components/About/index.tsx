@@ -1,18 +1,13 @@
-import { useNavigate } from "@remix-run/react";
 import { GithubLogo, InstagramLogo, LinkedinLogo } from "phosphor-react";
 
 import { Tooltip } from "~/global/components/Tooltip";
-import { SimpleButton } from "~/global/components/SimpleButton";
-import { Container, AboutTitle, Content, SocialArea } from "./styles";
+import { Container, AboutTitle, Content, SocialArea, SimpleLink } from "./styles";
 
 type IAboutProps = {
   id: string;
 }
 
 export function About({ id }: IAboutProps) {
-  const navigate = useNavigate();
-  const goToUtilityBelt = () => navigate("myutilitybelt");
-
   return (
     <Container id={id}>
       <AboutTitle>Sobre mim</AboutTitle>
@@ -20,7 +15,7 @@ export function About({ id }: IAboutProps) {
       <Content>
         <p>Olá, meu nome é Lucas Eduardo Gonçalves. Sou um desenvolvedor web autodidata que vive no estado de Minas Gerais, Brasil. Tenho 18 anos e estudo programação desde fevereiro de 2021.</p>
         <p>Tenho interesse em me juntar ao lado "front-end da força", utilizando tecnologias como Vite, NextJS e RemixJS. Sou apaixonado pelo React e todos os frameworks a ele ligados.</p>
-        <p>Eu tenho lutado na frente no último ano, e eventualmente comecei a desfrutar da ideia por trás de cada linha de código. A curiosidade de sempre aprender mais me impulsionou a buscar o proximo nivel. Agora, como profissionalmente conectado com a indústria de software, estou interessado em me juntar a comunidade tanto para ensinar quanto para principalmente aprender.</p>
+        <p>Eu tenho lutado na frente no último ano, e eventualmente comecei a desfrutar da ideia por trás de cada linha de código. A curiosidade de sempre aprender mais me impulsionou a buscar o próximo nível. Agora, como profissionalmente conectado com a indústria de software, estou interessado em me juntar à comunidade tanto para ensinar quanto para, principalmente, aprender.</p>
       </Content>
 
       <SocialArea>
@@ -44,7 +39,9 @@ export function About({ id }: IAboutProps) {
           </Tooltip>
         </div>
 
-        <SimpleButton text="Conhecer meu cinto de utilidades" onClick={goToUtilityBelt} />
+        <SimpleLink rel="preload" to="/myutilitybelt">
+          Conhecer meu cinto de utilidades
+        </SimpleLink>
       </SocialArea>
     </Container>
   );
