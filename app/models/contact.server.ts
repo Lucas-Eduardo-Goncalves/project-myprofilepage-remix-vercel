@@ -1,4 +1,4 @@
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, getDocs, query } from "firebase/firestore";
 import { firebaseFirestore } from "~/global/services/firebase";
 
 type AddFormItemContactProps = {
@@ -18,4 +18,20 @@ export async function addFormItemContact(data: AddFormItemContactProps) {
         firetoast: { message: "Ocorreu um erro", type: "error" }
       }
     })
+}
+
+export async function getContacts() {
+  const q = query(collection(firebaseFirestore, "contacts"));
+  const doc = await getDocs(q);
+
+  const res: any[] = [];
+
+  doc.forEach((doc) => {
+    res.push({
+      id: doc.id,
+      ...doc.data(),
+    });
+  });
+
+  return res;
 }
