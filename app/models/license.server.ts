@@ -1,4 +1,4 @@
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, doc, getDocs, query, updateDoc } from "firebase/firestore";
 import { firebaseFirestore } from "../global/services/firebase";
 
 export async function getLicense() {
@@ -15,4 +15,13 @@ export async function getLicense() {
   });
 
   return res[0];
+}
+
+export async function updateLicense(data: string) {
+  const docRef = doc(firebaseFirestore, "license", "KJTKEhAu5L3DjILWPjVn");
+  await updateDoc(docRef, {
+    license: data,
+  });
+
+  return null;
 }

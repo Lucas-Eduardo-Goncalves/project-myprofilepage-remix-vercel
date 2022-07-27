@@ -34,7 +34,8 @@ export function Portfolio({ id, projects }: IPortfolioProps) {
           <p>Conheça também os meus:&nbsp;&nbsp;</p>
 
           <Link to="articles">Artigos</Link>,&nbsp;&nbsp;
-          <Link to="certifications"> Certificados</Link>
+          <Link to="certifications">Certificados</Link>,&nbsp;&nbsp;
+          <Link to="games">Jogos</Link>
         </div>
 
         <SimpleButton text="Ver todos os meus projetos" />

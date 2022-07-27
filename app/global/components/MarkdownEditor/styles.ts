@@ -1,59 +1,164 @@
-import styled from "styled-components";
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+type TabButtonProps = {
+  isActive: boolean;
+  isError?: boolean;
+}
+
+export const AreaButton = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 60rem;
+  gap: 1rem;
+
+  padding: 1rem 0;
+`;
+
+export const EditorContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  max-width: 60rem;
+  padding: 1rem 0;
+
+  border: 1px solid var(--medium-purple);
+  border-radius: 0.25rem;
   background-color: var(--ultra-dark-purple);
 
-  display: flex;
+  .w-md-editor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
 
-  .md-editor-toolbar {
+  .w-md-editor-toolbar {
     display: flex;
     align-items: center;
 
-    border-bottom: 2px solid var(--background);
-    padding-bottom: 0.5rem;
-
-    gap: 0.25rem;
-
-    button {
-      background-color: var(--purple);
-      border: none;
-
-      width: 2rem;
-      height: 2rem;
-
+    ul {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 0.25rem;
+      padding: 0 1rem;
 
-      border-radius: 0.25rem;
-      transition: background-color 0.2s;
-
-      &:hover {
-        background-color: var(--dark-purple);
+      &:nth-child(2) {
+        display: none;
       }
-    }
 
-    & + div {
-      margin-top: 1rem;
+      li {
+        list-style: none;
+        &:nth-child(1) {
+          display: none;
+        }
+
+        button {
+          border: none;
+          border-radius: 0.25rem;
+          height: 2rem;
+          width: 2rem;
+          background-color: var(--purple);
+
+          &:hover {
+            background-color: var(--dark-purple);
+          }
+        }
+      }
     }
   }
 
-
-  .md-editor-content {
-    margin-top: 2rem;
+  .w-md-editor-content {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 1px solid var(--medium-purple);
 
-    > div {
-      flex: 1;
-
-      & + div {
-        border-top: 2px solid var(--background);
-        padding: 1rem;
-      }
+    .w-md-editor-aree {
+      width: 100%;
+      height: 100%;
     }
+
+    textarea {
+      width: 100%;
+      height: 340px;
+      
+      border: none;
+      background-color: transparent;
+      outline: none;
+
+      resize: none;
+    }
+  }
+
+  .w-md-editor-bar, .wmde-markdown-color, .w-md-editor-toolbar-divider {
+    display: none;
   }
 `;
+
+export const ViewContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  max-width: 60rem;
+  padding: 1rem 0;
+
+  border: 1px solid var(--medium-purple);
+  border-radius: 0.25rem;
+  background-color: var(--ultra-dark-purple);
+
+  .wmde-markdown {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 1rem;
+
+    ul, ol {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0 1rem;
+    }
+  } 
+`;
+
+export const TabButton = styled.button<TabButtonProps>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s;
+
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  background-color: var(--purple);
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: var(--medium-purple);
+  }
+
+  ${props => props.isActive && css`
+    background-color: var(--shape);
+    border-color: var(--purple);
+    color: var(--purple);
+
+    &:hover {
+      background-color: var(--shape);
+    }
+  `}
+
+  ${props => props.isError && css`
+    background-color: var(--shape);
+    border-color: var(--warning);
+    color: var(--warning);
+
+    &:hover {
+      background-color: var(--shape);
+    }
+  `}
+`;  
