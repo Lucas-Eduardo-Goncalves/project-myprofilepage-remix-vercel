@@ -3,7 +3,7 @@ import type { ActionFunction, LoaderFunction } from "@remix-run/node";
 
 import { licenceActionController } from "~/utils/controllers/licenceControllers";
 import { getLicense } from "~/models/license.server";
-import { AdminLicense } from "~/pages/Admin/sub/License";
+import { AdminLicense } from "~/pages/Admin/License";
 
 export const loader: LoaderFunction = async () => {
   return await getLicense();

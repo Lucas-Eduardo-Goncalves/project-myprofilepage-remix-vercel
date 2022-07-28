@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { useActionData } from "@remix-run/react";
 import type { ActionFunction } from "@remix-run/node";
 
-import { ArticlesForm } from "~/pages/Admin/sub/Articles/ArticlesForm";
+import { ArticlesForm } from "~/pages/Admin/Articles/ArticlesForm";
 import { AdminArticleActionController } from "~/utils/controllers/adminArticlesController";
 
 export const action: ActionFunction = async ({ request, params }) => {

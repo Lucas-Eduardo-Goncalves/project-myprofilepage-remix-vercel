@@ -1,5 +1,5 @@
 import type { ActionFunction } from "@remix-run/node";
-import { CertificationsForm } from "~/pages/Admin/sub/Certifications/CertificationsForm";
+import { CertificationsForm } from "~/pages/Admin/Certifications/CertificationsForm";
 import { AdminCertidficationActionController } from "~/utils/controllers/adminCertificationController";
 
 export const action: ActionFunction = async ({ request }) => {

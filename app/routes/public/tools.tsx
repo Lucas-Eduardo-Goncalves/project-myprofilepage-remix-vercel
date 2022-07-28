@@ -1,14 +1,13 @@
 import { useLoaderData } from "@remix-run/react";
+import { Tools } from "~/pages/Public/Tools";
+import { getTecnologies } from "~/models/tecnologies.server";
 import type { LoaderFunction } from "@remix-run/node";
 
-import { getContacts } from "~/models/contact.server";
-import { AdminEmails } from "~/pages/Admin/Emails";
-
 export const loader: LoaderFunction = async () => {
-  return await getContacts()
+  return await getTecnologies();
 }
 
 export default function () {
   const loaderData = useLoaderData();
-  return <AdminEmails emails={loaderData} />
+  return <Tools tecnologies={loaderData} />
 }

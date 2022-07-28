@@ -1,4 +1,4 @@
-import { CertificationsIndex } from "~/pages/Admin/sub/Certifications/CertificationsIndex";
+import { CertificationsIndex } from "~/pages/Admin/Certifications/CertificationsIndex";
 
 export default function () {
   return <CertificationsIndex />

@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 
-import { SimpleButton } from "~/global/components/SimpleButton";
-import { SimpleInput } from "~/global/components/SimpleInput";
+import { SimpleButton } from "~/global/components/Buttons/SimpleButton";
+import { SimpleInput } from "~/global/components/Form/SimpleInput";
 
 export type AdminFormProps = {
   errors: {

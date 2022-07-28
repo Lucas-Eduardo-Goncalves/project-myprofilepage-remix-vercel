@@ -1,14 +1,14 @@
 import { useLoaderData } from "@remix-run/react";
 import type { LoaderFunction } from "@remix-run/node";
 
-import { getContacts } from "~/models/contact.server";
-import { AdminEmails } from "~/pages/Admin/Emails";
+import { License } from "~/pages/Public/License/index";
+import { getLicense } from "~/models/license.server";
 
 export const loader: LoaderFunction = async () => {
-  return await getContacts()
+  return await getLicense();
 }
 
 export default function () {
   const loaderData = useLoaderData();
-  return <AdminEmails emails={loaderData} />
+  return <License license={loaderData.license} />
 }

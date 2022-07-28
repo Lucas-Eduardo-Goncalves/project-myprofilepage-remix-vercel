@@ -1,6 +1,6 @@
-import { SimpleButton } from "~/global/components/SimpleButton";
-import { SimpleInput } from "~/global/components/SimpleInput";
-import { SimpleTextArea } from "~/global/components/SimpleTextArea";
+import { SimpleButton } from "~/global/components/Buttons/SimpleButton";
+import { SimpleInput } from "~/global/components/Form/SimpleInput";
+import { SimpleTextArea } from "~/global/components/Form/SimpleTextArea";
 
 import ProfilePhoto from "~/global/assets/profilephoto.svg";
 import { Container, FormArea, FormTitle, ProfilePhotoArea } from "./styles";

@@ -1,4 +1,4 @@
-import { AdminArticles } from "~/pages/Admin/sub/Articles";
+import { AdminArticles } from "~/pages/Admin/Articles";
 
 export function ErrorBoundary() {
   return <h1>error</h1>

@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 
-import { SimpleButton } from "~/global/components/SimpleButton";
+import { SimpleButton } from "~/global/components/Buttons/SimpleButton";
 import { Container, PortfolioTitle, ProjectsArea, NavArea } from "./styles";
 
 type IProjectsProps = {
@@ -33,9 +33,9 @@ export function Portfolio({ id, projects }: IPortfolioProps) {
         <div>
           <p>Conheça também os meus:&nbsp;&nbsp;</p>
 
-          <Link to="articles">Artigos</Link>,&nbsp;&nbsp;
-          <Link to="certifications">Certificados</Link>,&nbsp;&nbsp;
-          <Link to="games">Jogos</Link>
+          <Link to="/public/articles">Artigos</Link>,&nbsp;&nbsp;
+          <Link to="/public/certifications">Certificados</Link>,&nbsp;&nbsp;
+          <Link to="/public/games">Jogos</Link>
         </div>
 
         <SimpleButton text="Ver todos os meus projetos" />

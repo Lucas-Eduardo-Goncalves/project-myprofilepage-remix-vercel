@@ -1,6 +1,6 @@
 import { useLoaderData } from "@remix-run/react";
 import { getUnicArticle } from "~/models/articles.server";
-import { ArticleMarkdown } from "~/pages/Admin/sub/Articles/ArticleMarckdown";
+import { ArticleMarkdown } from "~/pages/Admin/Articles/ArticleMarckdown";
 import type { ActionFunction, LoaderFunction } from "@remix-run/node";
 import { AdminArticleMarckdownActionController } from "~/utils/controllers/adminArticleMarkdownController";
 

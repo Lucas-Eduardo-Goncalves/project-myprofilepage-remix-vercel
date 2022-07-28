@@ -39,7 +39,7 @@ export function About({ id }: IAboutProps) {
           </Tooltip>
         </div>
 
-        <SimpleLink rel="preload" to="/myutilitybelt">
+        <SimpleLink rel="preload" to="/public/tools">
           Conhecer meu cinto de utilidades
         </SimpleLink>
       </SocialArea>

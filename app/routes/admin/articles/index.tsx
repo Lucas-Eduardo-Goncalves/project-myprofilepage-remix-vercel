@@ -1,5 +1,5 @@
 import { getArticles } from "~/models/articles.server";
-import { ArticlesIndex } from "~/pages/Admin/sub/Articles/ArticlesIndex";
+import { ArticlesIndex } from "~/pages/Admin/Articles/ArticlesIndex";
 import type { ActionFunction, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { actionIndexController } from "~/utils/controllers/actionIndexController";

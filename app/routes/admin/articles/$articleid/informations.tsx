@@ -1,7 +1,7 @@
 import type { ActionFunction, LoaderFunction } from "@remix-run/node";
 import { useActionData, useLoaderData } from "@remix-run/react";
 import { getUnicArticle } from "~/models/articles.server";
-import { ArticlesForm } from "~/pages/Admin/sub/Articles/ArticlesForm";
+import { ArticlesForm } from "~/pages/Admin/Articles/ArticlesForm";
 import { AdminArticleActionController } from "~/utils/controllers/adminArticlesController";
 
 export const loader: LoaderFunction = async ({ params }) => {
