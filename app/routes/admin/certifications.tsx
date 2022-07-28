@@ -1,3 +1,5 @@
+import { Certifications } from "~/pages/Admin/sub/Certifications";
+
 export default function () {
-  return <h1>Certificados</h1>
+  return <Certifications />
 }

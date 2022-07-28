@@ -12,6 +12,7 @@ export const Container = styled.div`
   border-radius: 0.5rem;
   overflow: hidden;
   z-index: 4;
+  min-width: 10rem;
 `;
 
 export const LinkButton = styled(Link) <LinkButtonProps>`
