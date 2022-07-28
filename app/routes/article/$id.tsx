@@ -13,7 +13,7 @@ export default function () {
   const loaderData = useLoaderData();
   return (
     <ClientOnly>
-      {() => <UnicArticle articleContent={loaderData.title} articleName={loaderData.article} />}
+      {() => <UnicArticle articleContent={loaderData.article} articleName={loaderData.title} />}
     </ClientOnly>
   )
 }
