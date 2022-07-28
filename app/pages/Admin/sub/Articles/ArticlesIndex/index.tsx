@@ -1,5 +1,6 @@
-import { MarkerCircle, Pen } from "phosphor-react";
-import { ArticleContainer, Button, Container } from "./styles";
+import { Form } from "@remix-run/react";
+import { MarkerCircle, Pen, Trash } from "phosphor-react";
+import { ArticleContainer, Button, Container, DeleteButton } from "./styles";
 
 type ArticlesIndexProps = {
   articles: {
@@ -27,11 +28,19 @@ export function ArticlesIndex({ articles }: ArticlesIndexProps) {
 
           <div>
             <Button to={`/admin/articles/${article.id}/markdown`}>
-              <MarkerCircle size={25} />
+              <MarkerCircle size={20} />
             </Button>
+
             <Button to={`/admin/articles/${article.id}/informations`}>
-              <Pen size={25} />
+              <Pen size={20} />
             </Button>
+
+            <Form method="post">
+              <input type="hidden" name="articleId" value={article.id} />
+              <DeleteButton name="_action" value="deleteArticle">
+                <Trash size={20} />
+              </DeleteButton>
+            </Form>
           </div>
         </ArticleContainer>
       ))}

@@ -6,8 +6,8 @@ import type { ActionFunction } from "@remix-run/node";
 import { ArticlesForm } from "~/pages/Admin/sub/Articles/ArticlesForm";
 import { AdminArticleActionController } from "~/utils/controllers/adminArticlesController";
 
-export const action: ActionFunction = async ({ request }) => {
-  return AdminArticleActionController(request);
+export const action: ActionFunction = async ({ request, params }) => {
+  return AdminArticleActionController(request, params);
 }
 
 export default function () {

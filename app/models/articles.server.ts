@@ -1,5 +1,5 @@
 import { redirect } from "@remix-run/node";
-import { addDoc, collection, doc, getDoc, getDocs, query, updateDoc } from "firebase/firestore"
+import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, updateDoc } from "firebase/firestore"
 import { firebaseFirestore } from "~/global/services/firebase";
 import { articlesValidateForm } from "~/utils/validations/articlesValidations";
 
@@ -97,5 +97,10 @@ export async function editMarkdownArticle(value: string, id: string) {
     article: value,
   });
 
+  return null;
+}
+
+export async function deleteArticle(id: string) {
+  await deleteDoc(doc(firebaseFirestore, "articles", id));
   return null;
 }
